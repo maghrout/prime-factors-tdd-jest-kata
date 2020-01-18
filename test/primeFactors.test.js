@@ -28,4 +28,12 @@ describe('PrimeFactors', () => {
     it('It calculate the prime factors of 7 and returns an array [7]', () => {
         expect(primeFactors.of(7)).toEqual([7]);
     })
+
+    it('It calculate the prime factors of 7 and returns an array [7]', () => {
+        expect(primeFactors.of(8)).toEqual([2, 2, 2]);
+    })
+
+    it('It calculate the prime factors of 7 and returns an array [7]', () => {
+        expect(primeFactors.of(9)).toEqual([3, 3]);
+    })
 })
