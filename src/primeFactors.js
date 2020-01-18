@@ -1,10 +1,18 @@
 const PrimeFactors = function() {};
 
 PrimeFactors.prototype.of = function(primeNumber) {
-    if(primeNumber > 1) {
-        return [primeNumber]
+    var primeFactorArray = [];
+
+    while(primeNumber > 1) {
+        if(primeNumber % 2 === 0) {
+            primeFactorArray.push(2);
+            primeNumber /= 2;
+        } else {
+            primeFactorArray.push(primeNumber);
+            break;
+        }
     }
-    return [];
+    return primeFactorArray;
 }
 
 module.exports = new PrimeFactors();
